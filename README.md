@@ -37,57 +37,58 @@ visite page: http://127.0.0.1:8000/docs
 
 - post fake data to endpoint `/add_bid`:
 
-```json {
-   "bids":[
-      {
-         "producer":"SolarCo",
-         "price":50.0
-      },
-      {
-         "producer":"WindWorks",
-         "price":45.0
-      },
-      {
-         "producer":"NextEra Energy",
-         "price":48.5
-      },
-      {
-         "producer":"SunPower",
-         "price":55.2
-      },
-      {
-         "producer":"Vestas Wind Systems",
-         "price":42.7
-      },
-      {
-         "producer":"Brookfield Renewable Partners",
-         "price":51.0
-      },
-      {
-         "producer":"First Solar",
-         "price":47.3
-      },
-      {
-         "producer":"Orsted",
-         "price":49.9
-      },
-      {
-         "producer":"Enel Green Power",
-         "price":44.6
-      },
-      {
-         "producer":"Iberdrola",
-         "price":46.8
-      },
-      {
-         "producer":"Siemens Gamesa",
-         "price":43.5
-      },
-      {
-         "producer":"Pattern Energy",
-         "price":52.1
-      }
-   ]
+```json
+{
+  "bids": [
+    {
+      "producer": "SolarCo",
+      "price": 50.0
+    },
+    {
+      "producer": "WindWorks",
+      "price": 45.0
+    },
+    {
+      "producer": "NextEra Energy",
+      "price": 48.5
+    },
+    {
+      "producer": "SunPower",
+      "price": 55.2
+    },
+    {
+      "producer": "Vestas Wind Systems",
+      "price": 42.7
+    },
+    {
+      "producer": "Brookfield Renewable Partners",
+      "price": 51.0
+    },
+    {
+      "producer": "First Solar",
+      "price": 47.3
+    },
+    {
+      "producer": "Orsted",
+      "price": 49.9
+    },
+    {
+      "producer": "Enel Green Power",
+      "price": 44.6
+    },
+    {
+      "producer": "Iberdrola",
+      "price": 46.8
+    },
+    {
+      "producer": "Siemens Gamesa",
+      "price": 43.5
+    },
+    {
+      "producer": "Pattern Energy",
+      "price": 52.1
+    }
+  ]
 }
 ```
 
@@ -96,5 +97,5 @@ visite page: http://127.0.0.1:8000/docs
 - open a new terminal, run `source venv/bin/activate`
 - run `streamlit run visualize.py`
 
-vsite page: http://localhost:8501/
+visite page: http://localhost:8501/
 ![alt text](https://github.com/bohuang-work/auction/blob/main/img/histogram.png)
