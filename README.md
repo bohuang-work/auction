@@ -25,10 +25,15 @@ run `./setup.sh`
 ## Run
 
 1. run FastAPI with uvicorn and visit the backend swagger:
+
    run `uvicorn main:app --reload `
+
    visite page: http://127.0.0.1:8000/docs
+   ![alt text](https://github.com/bohuang-work/auction/blob/main/img/swagger.png)
 
 2. run streamlit and visulize the bilds:
+
    run `streamlit run visualize.py `
+
    vsite page: http://localhost:8501/
-   ![alt text](https://github.com/bohuang-work/fast-api/blob/main/fastAPI.png)
+   ![alt text](https://github.com/bohuang-work/auction/blob/main/img/histogram.png)
