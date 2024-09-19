@@ -13,9 +13,6 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Declare a Base for SQLAlchemy models
 Base = declarative_base()
 
-# Create the tables in the database
-Base.metadata.create_all(bind=engine)
-
 
 # Dependency to get a SQLAlchemy session
 def get_db():

@@ -21,6 +21,9 @@ def get_bids_from_db():
         # Query all bids from the BidDB table
         bids = db.query(BidDB).all()
         return bids
+    except Exception as e:
+        st.error(f"Error accessing the database: {e}")
+        return []
     finally:
         db.close()
 

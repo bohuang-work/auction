@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field, condecimal, conlist, field_validator
 from sqlalchemy import Column, Float, Integer, String
 
-from src.db import Base
+from src.db import Base, engine
 
 
 # Database model
@@ -11,6 +11,9 @@ class BidDB(Base):
     producer = Column(String, nullable=False)
     price = Column(Float, nullable=False)
 
+
+# Create the tables in the database
+Base.metadata.create_all(bind=engine)
 
 # API model
 class Bid(BaseModel):

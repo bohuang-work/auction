@@ -21,7 +21,7 @@ RESTful-api implemented using Fast-API framework:
 
 ## Setup
 
-run `./setup.sh`
+- run `./setup.sh`
 
 It create a python virtual environment locally and install all the rependencies based on requirements.txt
 
@@ -29,14 +29,72 @@ It create a python virtual environment locally and install all the rependencies 
 
 #### Run FastAPI with uvicorn and visit the backend swagger:
 
-run `uvicorn main:app --reload `
+- run `source venv/bin/activate` to activate the virtual environment
+- run `uvicorn main:app --reload`
 
 visite page: http://127.0.0.1:8000/docs
 ![alt text](https://github.com/bohuang-work/auction/blob/main/img/swagger.png)
 
+- post fake data to endpoint `/add_bid`:
+
+```json {
+   "bids":[
+      {
+         "producer":"SolarCo",
+         "price":50.0
+      },
+      {
+         "producer":"WindWorks",
+         "price":45.0
+      },
+      {
+         "producer":"NextEra Energy",
+         "price":48.5
+      },
+      {
+         "producer":"SunPower",
+         "price":55.2
+      },
+      {
+         "producer":"Vestas Wind Systems",
+         "price":42.7
+      },
+      {
+         "producer":"Brookfield Renewable Partners",
+         "price":51.0
+      },
+      {
+         "producer":"First Solar",
+         "price":47.3
+      },
+      {
+         "producer":"Orsted",
+         "price":49.9
+      },
+      {
+         "producer":"Enel Green Power",
+         "price":44.6
+      },
+      {
+         "producer":"Iberdrola",
+         "price":46.8
+      },
+      {
+         "producer":"Siemens Gamesa",
+         "price":43.5
+      },
+      {
+         "producer":"Pattern Energy",
+         "price":52.1
+      }
+   ]
+}
+```
+
 #### Run streamlit and visulize the bilds:
 
-run `streamlit run visualize.py `
+- open a new terminal, run `source venv/bin/activate`
+- run `streamlit run visualize.py`
 
 vsite page: http://localhost:8501/
 ![alt text](https://github.com/bohuang-work/auction/blob/main/img/histogram.png)

@@ -19,3 +19,8 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 echo "Setup complete! Virtual environment created and dependencies installed."
+echo "To activate the virtual environment, run:"
+
+echo "##########################"
+echo "source venv/bin/activate"
+echo "##########################"
