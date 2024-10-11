@@ -1,5 +1,3 @@
-![img/eon.png](https://github.com/bohuang-work/auction/blob/main/img/eon.png)
-
 # Aution System for Renewable Energy Provider
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
