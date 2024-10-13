@@ -24,3 +24,20 @@ licenses.dump
 
 # venv
 venv/
+
+# terraform
+
+# Ignore Terraform state files and backups
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# Ignore the Terraform configuration lock file
+.terraform.lock.hcl
+
+# Ignore the Terraform directory
+.terraform/
+
+# Ignore any plan files
+*.tfplan

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-app
+  labels:
+    app: fastapi-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-app
+  template:
+    metadata:
+      labels:
+        app: fastapi-app
+    spec:
+      containers:
+      - name: fastapi-container
+        image: bohuang910407/app:latest  # Use the local registry image
+        ports:
+        - containerPort: 8000  # Exposing port 8000 since FastAPI runs on this port
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-service
+spec:
+  type: LoadBalancer  # Use LoadBalancer or NodePort based on your k3d setup
+  ports:
+  - port: 80  # External port to access the service
+    targetPort: 8000  # The port where the FastAPI app is listening inside the container
+  selector:
+    app: fastapi-app
